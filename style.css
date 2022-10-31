@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red-color: #ea5353;
+  --cyan-color: #45d3d3;
+  --orange-color: #fcaf4a;
+  --blue-color: #549ef2;
+  --dark-gray-color: #4c4e61;
+  --gray-color: #a3a5ae;
+  --light-gray-color: #fafafa;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-gray-color);
+  color: var(--dark-gray-color);
+  position: relative;
+  padding-bottom: 60px;
+  min-height: 100vh;
+}
+
+.heading {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 560px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.heading h1 {
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--dark-gray-color);
+  margin-bottom: 10px;
+}
+
+.heading h1 span {
+  font-weight: 600;
+}
+
+.heading p {
+  color: var(--gray-color);
+}
+
+.container {
+  width: 100%;
+  padding: 0 30px;
+  max-width: 1142px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  height: 252px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  box-shadow: 0 5px 15px 0 rgba(163, 165, 174, 0.4);
+}
+
+.card.red {
+  border-top: 4px solid var(--red-color);
+}
+.card.cyan {
+  border-top: 4px solid var(--cyan-color);
+}
+.card.orange {
+  border-top: 4px solid var(--orange-color);
+}
+.card.blue {
+  border-top: 4px solid var(--blue-color);
+}
+
+.card ~ .card {
+  margin-top: 30px;
+}
+
+.card h2 {
+  font-size: 20px;
+}
+
+.card p {
+  color: var(--gray-color);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.card img {
+  margin-left: auto;
+  display: block;
+  align-self: flex-end;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+}
+
+@media (min-width: 767px) {
+  .heading h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .container {
+    flex-wrap: nowrap;
+  }
+  .column {
+    width: 33.33%;
+  }
+}
